@@ -21,7 +21,10 @@ int main() {
 	person_t tmp[1];
 	int i = 0;
 	while (fread(tmp, sizeof(person_t), 1, wfp)) {
-		printf("[%d] %d: %s %s \n", i, tmp[0].id, tmp[0].first_name, tmp[0].last_name);
+		printf("[%d] %d: %s %s \n", i, 
+		                            tmp[0].id,
+		                            tmp[0].first_name,
+									tmp[0].last_name);
 		i++;
 	}
 	fclose(wfp);
