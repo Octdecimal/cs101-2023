@@ -30,7 +30,7 @@ int main()
                 } else {
                     lotto[j] = rand() % 9 + 1;
                 }
-            fprintf(fp, "%02d ", lotto[j]);
+                fprintf(fp, "%02d ", lotto[j]);
             }    
         } else {
             for(int j = 0; j < 7; j++) {
