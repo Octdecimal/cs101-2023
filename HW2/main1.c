@@ -28,7 +28,7 @@ int main()
                 if(j != 6) {
                     lotto[j] = rand() % 69 + 1;
                 } else {
-                    lotto[j] = rand() % 9 + 1;
+                    lotto[j] = rand() % 10 + 1;
                 }
                 fprintf(fp, "%02d ", lotto[j]);
             }    
