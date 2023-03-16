@@ -16,7 +16,7 @@ int main()
     }
     srand((unsigned) time(NULL));
     
-    printf("  еw╙О╔За{╙Ь╘╟╪жЁz╠m╤Rай╤R╬В╔x\n  ╫п╟щ╠z╜n╤R╢X╡у╪жЁz╠m║G");
+    printf("  Ф╜║Х©▌Е┘┴Х┤╗И∙╥Е╨ Ф╗┌И─▐Е╫╘Х╡╥ХЁ╪Х╡╥Ф╘÷Е▐╟\n  Х╚▀Е∙▐Ф┌╗Х╕│Х╡╥Е╧╬Г╣└Ф╗┌И─▐Е╫╘О╪ ");
     scanf("%d", &n);
     
     fprintf(fp, "======== lotto649 ========\n");
@@ -26,7 +26,7 @@ int main()
         if(i <= n) {
             for(int j = 0; j < 7; j++) {
                 if(j != 6) {
-                    lotto[j] = rand() % 68 + 1;
+                    lotto[j] = rand() % 69 + 1;
                 } else {
                     lotto[j] = rand() % 9 + 1;
                 }
@@ -43,7 +43,7 @@ int main()
     fprintf(fp, "======== csie@cgu ========");
     fclose(fp);
     
-    printf("  ╓w╛╟╠zай╤R╙╨ %d ╡у╪жЁz╡у╕X©И╔X╕э  lotto.txt", n);
+    printf("  Е╥╡Г┌╨Ф┌╗ХЁ╪Х╡╥Г └ %d Г╣└Ф╗┌И─▐Г╣└Е░┬Х╪╦Е┤╨Х┤Ё  lotto.txt", n);
     
     return 0;
 }
