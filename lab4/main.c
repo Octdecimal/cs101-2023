@@ -1,9 +1,10 @@
 #include <stdio.h>
 void replace_all(char* str, char oldChar, char newChar) {
-	for(int i = 0; i < sizeof(str)/sizeof(char); i++) {
-		if(str[i] == oldChar) {
-			str[i] = newChar;
+	while(*str != '\0') {
+		if(*str == oldChar) {
+			*str = newChar;
 		}
+		*str++;
 	}
 }
 
