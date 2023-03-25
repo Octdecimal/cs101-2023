@@ -12,16 +12,17 @@ int main()
     fp = fopen("lotto.txt", "w+");
     if(fp == NULL) {
         printf("Error creat file\n");
-        reutrn 1;
+        return 1;
     }
     srand((unsigned) time(NULL));
     
-    printf("  æ­¡è¿å…‰è‡¨é•·åºšæ¨‚é€å½©è²·è³¼è²·æ©Ÿå°\n  è«‹å•æ‚¨è¦è²·å¹¾çµ„æ¨‚é€å½©ï¼š");
+    printf("  Åwªï¥úÁ{ªø©°¼Ö³z±m¶RÁÊ¶R¾÷¥x\n  ½Ğ°İ±z­n¶R´X²Õ¼Ö³z±m¡G");
     scanf("%d", &n);
     
     fprintf(fp, "======== lotto649 ========\n");
     fprintf(fp, " %s", ctime(&curtime));
     for(int i = 1; i < 6; i++) {
+        printf("%d\n", rand());
         fprintf(fp, "[%d]: ", i);
         if(i <= n) {
             for(int j = 0; j < 7; j++) {
@@ -43,7 +44,7 @@ int main()
     fprintf(fp, "======== csie@cgu ========");
     fclose(fp);
     
-    printf("  å·²ç‚ºæ‚¨è³¼è²·çš„ %d çµ„æ¨‚é€çµ„åˆè¼¸å‡ºè‡³  lotto.txt", n);
+    printf("  ¤w¬°±zÁÊ¶Rªº %d ²Õ¼Ö³z²Õ¦X¿é¥X¦Ü  lotto.txt", n);
     
     return 0;
 }
