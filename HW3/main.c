@@ -35,9 +35,6 @@ void lottoChecker(FILE* record, int price[3]) {
             int match = 0;
             for(int j = 0; j < 7; j++) {
                 for(int k = 0; k < 3; k++) {
-                    if(price[k] == 0) {
-                        break;
-                    }
                     if(rc.lotto_set[i][j] == price[k]) {
                         match++;
                         total++;
