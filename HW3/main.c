@@ -46,7 +46,7 @@ void lottoChecker(FILE* record, int price[3]) {
                 for(int k = 0; k < 7; k++) {
                     printf("%02d ",rc.lotto_set[i][k]);
                 }
-                printf("\n\n");
+                printf("¤¤%d­Ó¸¹½X\n\n", match);
                 match = 0;
             }
         }
