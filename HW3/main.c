@@ -12,7 +12,7 @@ typedef struct {
 
 void randomLotto(lotto_record *rc, int i, int j) {
     if(j != 6) {
-         rc->lotto_set[i][j] = rand() % 69 + 1;
+        rc->lotto_set[i][j] = rand() % 69 + 1;
     } else {
         rc->lotto_set[i][j] = rand() % 10 + 1;
     }
