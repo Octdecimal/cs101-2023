@@ -46,7 +46,7 @@ void lottoChecker(FILE* record, int price[3]) {
                 for(int k = 0; k < 7; k++) {
                     printf("%02d ",rc.lotto_set[i][k]);
                 }
-                printf("中%d個號碼\n\n", match);
+                printf("\n中%d個號碼\n\n", match);
                 match = 0;
             }
         }
@@ -112,10 +112,9 @@ int main() {
     while(code != 0) {
         printf("請問您要買幾組樂透彩：");
 	    scanf("%d", &code);
-        fflush(stdin);
 	    if(code == 0) {
 	    	printf("請輸入中獎號碼 (最多三個)：");
-        	scanf("%31[^\n]", input);
+        	scanf(" %31[^\n]%*c", &input);
             for(int i = 0, j = 0, k = 0; i < 31; i++) {
                 if(input[i] > '0' && input[i] <= '9') {
                     price[j] = 10 * price[j] + input[i] - '0';
@@ -137,7 +136,7 @@ int main() {
     	} else {
             for(int i = 0; i < code; i++) {
     	        LottoCreater(i+1, &rc);
-                if(!rc.receipt_price) {
+                if(rc.receipt_price) {
                     fwrite(&rc, sizeof(lotto_record), 1, record);
                     rc.receipt_id++;
                 }
