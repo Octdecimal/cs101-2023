@@ -31,6 +31,7 @@ int main() {
 	strftime(Time, 64,"%Y %m%d %X", gmtime(&b));
 	sprintf(text, "time of end: %s\n", Time);
 	fprintf(F, text);
+	printf("the program is end");
 	fclose(F);
 	return 0;
 }
