@@ -4,12 +4,11 @@ void mul(int i, int j) {
 	if(i == 9 && j == 9) {
 		return;
 	}else if (j == 9) {
-		i++;
-		j = 0;
 		printf("\n");
+		mul(i+1, 1);
+	}else {
+		mul(i, j+1);
 	}
-	j++;
-	mul(i, j);
 }
 
 int main() {
