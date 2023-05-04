@@ -32,7 +32,7 @@ class TicTacToe{
 						cin >> input;
 					}else if(list[input-1]-'0' != input) {
 						cout << "\nthe number has been used, please input another number: ";
-							cin >> input;
+						cin >> input;
 	    			}else{
 		    			break;
 			    	}
