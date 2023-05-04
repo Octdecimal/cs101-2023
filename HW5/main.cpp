@@ -1,5 +1,7 @@
 #include<iostream>
+
 using namespace std;
+
 class TicTacToe{
 	public:
 	char list[10];
