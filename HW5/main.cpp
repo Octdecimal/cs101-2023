@@ -5,16 +5,16 @@ class TicTacToe{
 	char list[10];
 	    void print_board(){
 			cout << "     ▇     ▇     \n"\
-			    	"  "<<list[0]<<"  ▇  "<<list[1]<<"  ▇  "<<list[2]<<"   \n"\
+			        "  "<<list[0]<<"  ▇  "<<list[1]<<"  ▇  "<<list[2]<<"   \n"\
 					"     ▇     ▇     \n"\
-    				"▇▇▇▇▇▇▇▇▇▇\n"\
-	    			"     ▇     ▇     \n"\
-	    			"  "<<list[3]<<"  ▇  "<<list[4]<<"  ▇  "<<list[5]<<"   \n"\
-		    		"     ▇     ▇     \n"\
-			    	"▇▇▇▇▇▇▇▇▇▇\n"\
-			    	"     ▇     ▇     \n"\
+					"▇▇▇▇▇▇▇▇▇▇\n"\
+					"     ▇     ▇     \n"\
+					"  "<<list[3]<<"  ▇  "<<list[4]<<"  ▇  "<<list[5]<<"   \n"\
+					"     ▇     ▇     \n"\
+					"▇▇▇▇▇▇▇▇▇▇\n"\
+					"     ▇     ▇     \n"\
 					"  "<<list[6]<<"  ▇  "<<list[7]<<"  ▇  "<<list[8]<<"   \n"\
-    				"     ▇     ▇     \n\n";
+					"     ▇     ▇     \n\n";
 		}
     	void run() {
 	    	int input;
@@ -28,11 +28,11 @@ class TicTacToe{
 		    	cout<<"Player "<<player<<", please input a number in range \"1~9\":  ";
 		    	while(cin >> input) {
 			    	if(list[input-1] < '1' or list[input-1] >'9') {
-				    	cout << "\nwrong input, please input a number: ";
-					    cin >> input;
-				    }else if(list[input-1]-'0' != input) {
-						cout << "\nthe number has been used, please input another number: ";
+						cout << "\nwrong input, please input a number: ";
 						cin >> input;
+					}else if(list[input-1]-'0' != input) {
+						cout << "\nthe number has been used, please input another number: ";
+							cin >> input;
 	    			}else{
 		    			break;
 			    	}
