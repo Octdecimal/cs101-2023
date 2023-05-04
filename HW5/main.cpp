@@ -3,20 +3,20 @@ using namespace std;
 class TicTacToe{
 	public:
 	char list[10];
-	    void print_board(void){
+	    void print_board(){
 			cout << "     ▇     ▇     \n"\
 			    	"  "<<list[0]<<"  ▇  "<<list[1]<<"  ▇  "<<list[2]<<"   \n"\
-				    "     ▇     ▇     \n"\
+					"     ▇     ▇     \n"\
     				"▇▇▇▇▇▇▇▇▇▇\n"\
 	    			"     ▇     ▇     \n"\
 	    			"  "<<list[3]<<"  ▇  "<<list[4]<<"  ▇  "<<list[5]<<"   \n"\
 		    		"     ▇     ▇     \n"\
 			    	"▇▇▇▇▇▇▇▇▇▇\n"\
 			    	"     ▇     ▇     \n"\
-   				    "  "<<list[6]<<"  ▇  "<<list[7]<<"  ▇  "<<list[8]<<"   \n"\
+					"  "<<list[6]<<"  ▇  "<<list[7]<<"  ▇  "<<list[8]<<"   \n"\
     				"     ▇     ▇     \n\n";
 		}
-    	void run(void) {
+    	void run() {
 	    	int input;
     		int player = 1;
     		for(int i = 1; i < 10; i++) {
@@ -32,7 +32,7 @@ class TicTacToe{
 					    cin >> input;
 				    }else if(list[input-1]-'0' != input) {
 					    cout << "\nthe number has been used, please input another number: ";
-					    cin >> input;
+						cin >> input;
 	    			}else{
 		    			break;
 			    	}
@@ -55,7 +55,7 @@ class TicTacToe{
 		    	        print_board();
 		    			cout << "==> Player 1 win";
 			    		return;
-				    }else {
+					}else {
 					cout << "\n\n-- Tic Tac Toe -- CSIE@CGU\nPlayer 1 (x)  -  Player 2 (O)\n\n";
 		    	        print_board();
     					cout << "==> Player 2 win";
