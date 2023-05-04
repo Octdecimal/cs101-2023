@@ -6,17 +6,17 @@ class TicTacToe{
 	public:
 	char list[10];
 	    void print_board(void){
-			cout << "     ¢h¢h     ¢h¢h     \n"\
-			    	"  "<<list[0]<<"  ¢h¢h  "<<list[1]<<"  ¢h¢h  "<<list[2]<<"   \n"\
-					"     ¢h¢h     ¢h¢h     \n"\
-    				"¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h\n"\
-	    			"     ¢h¢h     ¢h¢h     \n"\
-	    			"  "<<list[3]<<"  ¢h¢h  "<<list[4]<<"  ¢h¢h  "<<list[5]<<"   \n"\
-		    		"     ¢h¢h     ¢h¢h     \n"\
-			    	"¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h¢h\n"\
-				    "     ¢h¢h     ¢h¢h     \n"\
-   					"  "<<list[6]<<"  ¢h¢h  "<<list[7]<<"  ¢h¢h  "<<list[8]<<"   \n"\
-    				"     ¢h¢h     ¢h¢h     \n\n";
+			cout << "     â–‡     â–‡     \n"\
+			    	"  "<<list[0]<<"  â–‡  "<<list[1]<<"  â–‡  "<<list[2]<<"   \n"\
+					"     â–‡     â–‡     \n"\
+    				"â–‡â–‡â–‡â–‡â–‡â–‡â–‡â–‡â–‡â–‡\n"\
+	    			"     â–‡     â–‡     \n"\
+	    			"  "<<list[3]<<"  â–‡  "<<list[4]<<"  â–‡  "<<list[5]<<"   \n"\
+		    		"     â–‡     â–‡     \n"\
+			    	"â–‡â–‡â–‡â–‡â–‡â–‡â–‡â–‡â–‡â–‡\n"\
+				    "     â–‡     â–‡     \n"\
+   					"  "<<list[6]<<"  â–‡  "<<list[7]<<"  â–‡  "<<list[8]<<"   \n"\
+    				"     â–‡     â–‡     \n\n";
 		}
     	void run(void) {
 	    	int input;
