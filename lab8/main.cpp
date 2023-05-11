@@ -16,7 +16,7 @@ class Fueltank {
 				cout << "Error: FueltankCapacity: " << v << ", but fuel up: " << m_FueltankCapacity << "\n";
 			}
 			if(gas != m_Gas_grade) {
-				cout << "Error: Gas_grade " << gas << ", Correct Gas_grade: " << m_Gas_grade << "\n";
+				cout << "Error: Gas_grade: " << gas << ", Correct Gas_grade: " << m_Gas_grade << "\n";
 			}
 			if((v < m_FueltankCapacity) and (gas == m_Gas_grade)) {
 				cout << "fuel_up: " << v << " Gas_grade: " << gas << "\n";
@@ -25,41 +25,40 @@ class Fueltank {
 		};
 		int set_Gas_grade(int Gas_grade) {
 			m_Gas_grade = Gas_grade;
-			cout << "Set Gas_grade: " << m_Gas_grade << "\n";
-			return Gas_grade; 
+			return m_Gas_grade; 
 		};
 		int get_Gas_grade() {
-			cout << m_Gas_grade << "\n";
 			return m_Gas_grade;
 		};
 };
 
 class Car {
-	Fueltank m_Fueltank;
 	public:
 	string m_brand;
 	string m_model;
 	int m_year;
 	int m_MaxSeating;
-	string get_brand() {
-		return m_brand;
-	}
+	Fueltank m_Fueltank;
 	Car(string x, string y, int z, int s) {
 		m_brand = x;
 		m_model = y;
 		m_year = z;
 		m_MaxSeating = s;
     }
+	string get_brand() {
+		return m_brand;
+	}
 	int get_m_MaxSeating() {
 		return m_MaxSeating;
 	}
 	int get_Gas_grade() {
 		return m_Fueltank.get_Gas_grade();
 	}
-	int set_Gas_grade(int gas) {
+	int set_Gas_grade(int gas = 98) {
+		cout << "Set_Gas_grade : " << gas << "\n";
 		return m_Fueltank.set_Gas_grade(gas);
 	}
-	int fuel_up(int v, int gas) {
+	int fuel_up(int v, int gas = 98) {
 		return m_Fueltank.fuel_up(v, gas);
 	}
 };
@@ -70,7 +69,7 @@ class BMW_Car: public Car {
 
 	public:
 	BMW_Car(string y, int z, int s) : Car("BMW", y, z, s) {
-		cout << "Constructing BMW_Car\n";
+		cout << "Constructing BMW_Car" << endl;
 		m_DriveMode = "Rear-wheel";
 	}
 
@@ -85,7 +84,7 @@ class AUDI_Car: public Car {
 
 	public:
 	AUDI_Car(string y, int z, int s) : Car("AUDI", y, z, s) {
-		cout << "Constructing AUDI_Car\n";
+		cout << "Constructing AUDI_Car" << endl;
 		m_DriveMode = "Front-wheel";
 	}
 
@@ -100,7 +99,7 @@ class BENZ_Car: public Car {
 
 	public:
 	BENZ_Car(string y, int z, int s) : Car("BENZ", y, z, s) {
-		cout << "Constructing BENZ_Car\n";
+		cout << "Constructing BENZ_Car" << endl;
 		m_DriveMode = "Front-wheel";
 	}
 
@@ -110,18 +109,7 @@ class BENZ_Car: public Car {
 };
 
 int main() {
-	BMW_Car car_1("X5", 2023, 6);
-	cout << car_1.m_brand;
-	cout << " : Drive mode = " << car_1.get_DriveMode() << endl;
-
-	AUDI_Car car_2("A1", 2023, 5);
-	cout << car_2.m_brand;
-	cout << " : Drive mode = " << car_2.get_DriveMode() << endl;
-
-	BENZ_Car car_3("S6", 2023, 6);
-	cout << car_3.m_brand;
-	cout << " : Drive mode = " << car_3.get_DriveMode()  << "\n" << endl;
-
+    AUDI_Car car_2("A1", 2023, 5);
 	cout << car_2.get_brand() << " : Gas_grade = " << car_2.get_Gas_grade() << endl;
 	car_2.set_Gas_grade(95);
 	cout << car_2.get_brand() << " : Gas_grade = " << car_2.get_Gas_grade() << endl;
