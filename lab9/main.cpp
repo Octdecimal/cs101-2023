@@ -18,7 +18,7 @@ public:
             size_t pos = str.find(a);
             while (pos != string::npos) {
                 str.replace(pos, a.length(), b);
-                pos = str.find(a, pos + b.length());
+                pos = str.find(a, pos + b.length() - 1);
             }
             out << str << endl;
         }
