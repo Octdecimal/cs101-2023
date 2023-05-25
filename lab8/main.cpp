@@ -1,7 +1,19 @@
 #include<iostream>
 
 using namespace std;
-
+class Engine {
+	private:
+	    int m_EngineCapacity;
+		int m_Horsepower;
+		bool m_EngineRunning;
+	public:
+	    Engine(int EngineCapacity = 2000, int Horsepower = 200) {
+			m_EngineCapacity = EngineCapacity;
+			m_Horsepower = Horsepower;
+			m_EngineRunning = false;
+		}
+		bool (Engine)
+};
 class Fueltank {
 	private:
 	    int m_FueltankCapacity;
