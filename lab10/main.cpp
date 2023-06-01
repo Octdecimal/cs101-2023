@@ -13,11 +13,23 @@ class myString {
 
 class ReadClass{
 		string a = "class";
-		ifstream in;
+		fstream in;
+		fstream jn;
+		string name = "main.cpp";
 	public:
 		void showClass() {
 			string str;
-			in.open("main.cpp");
+			int count = 0;
+			in.open(name);
+			jn.open(name);
+			while(getline(jn,str)){
+				size_t pos = str.find(a);
+				if(pos != string::npos && pos == 0){
+					count++;
+				}
+			}
+			cout<<count << " class in main.cpp\n";
+			jn.close();
 			while(getline(in, str)){
 				string out;
 				size_t pos = str.find(a);
