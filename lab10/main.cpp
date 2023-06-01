@@ -3,27 +3,35 @@
 #include <string>
 using namespace std;
 
-class ReadClass{
-	string a = "class";
-	ifstream in;
+class myString {
+		string m_str;
 	public:
-	void showClass() {
-		string str;
-		in.open("main.cpp");
-		while(getline(in, str)){
-			string out;
-			size_t pos = str.find(a);
-			if(pos != string::npos) {
-				for(size_t i = pos + a.length() + 1; (str[i]>='a' && str[i]<='z')||(str[i]>='A' && str[i]<='Z'); i++) {
-					out += str[i]; 
+		myString(string s) {
+			m_str = s;
+		}
+};
+
+class ReadClass{
+		string a = "class";
+		ifstream in;
+	public:
+		void showClass() {
+			string str;
+			in.open("main.cpp");
+			while(getline(in, str)){
+				string out;
+				size_t pos = str.find(a);
+				if(pos != string::npos && pos == 0) {
+					for(size_t i = pos + a.length() + 1; (str[i]>='a' && str[i]<='z')||(str[i]>='A' && str[i]<='Z')||(str[i]>='0' && str[i]<='9'||str[i]=='_'); i++) {
+						out += str[i]; 
+					}
+				}
+				if(!out.empty()){
+					cout << "class " << out << "\n";
 				}
 			}
-			if(!out.empty()){
-				cout << "class " << out << "\n";
-			}
+			in.close();
 		}
-		in.close();
-	}
 };
 
 int main() {
