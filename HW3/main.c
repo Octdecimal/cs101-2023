@@ -29,7 +29,7 @@ void lottoChecker(FILE* record, int price[3]) {
     int total = 0;
     lotto_record rc;
     rewind(record);
-    printf("\n¥H¤U¬°¤¤¼ú±m¨é¡G\n");
+    printf("\nï¿½Hï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½ï¿½G\n");
     while(fread(&rc, sizeof(lotto_record), 1, record)) {
         for(int i = 0; i < 5; i++) {
             int match = 0;
@@ -42,17 +42,17 @@ void lottoChecker(FILE* record, int price[3]) {
                 }
             }
             if(match != 0) {
-                printf("\n±m¨é No. %d\n°â¥X®É¶¡¡G%s\n¸¹½X¡G ",rc.receipt_id, rc.receipt_time);
+                printf("\nï¿½mï¿½ï¿½ No. %d\nï¿½ï¿½Xï¿½É¶ï¿½ï¿½G%s\nï¿½ï¿½ï¿½Xï¿½G ",rc.receipt_id, rc.receipt_time);
                 for(int k = 0; k < 7; k++) {
                     printf("%02d ",rc.lotto_set[i][k]);
                 }
-                printf("\n¤¤ %d ­Ó¸¹½X\n\n", match);
+                printf("\nï¿½ï¿½ %d ï¿½Ó¸ï¿½ï¿½X\n\n", match);
                 match = 0;
             }
         }
     }
     if(!total) {
-        printf("±z©ÒÁÊ¶Rªº±m¨é¨Ã¥¼¤¤¼ú\n");
+        printf("ï¿½zï¿½ï¿½ï¿½Ê¶Rï¿½ï¿½ï¿½mï¿½ï¿½Ã¥ï¿½ï¿½ï¿½ï¿½ï¿½\n");
     }
 }
 
@@ -71,7 +71,7 @@ void LottoCreater(int i, lotto_record *rc) {
         printf("\nError creat %s\n", filename);
         exit(1);
     } else {
-        printf("\n¥»¦¸¬°±zÁÊ¶Rªº²Ä %d ±i±m¨é,½Ð°Ý±z­n¶R´X²Õ¼Æ¦r¡G", i);
+        printf("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½zï¿½Ê¶Rï¿½ï¿½ï¿½ï¿½ %d ï¿½iï¿½mï¿½ï¿½,ï¿½Ð°Ý±zï¿½nï¿½Rï¿½Xï¿½Õ¼Æ¦rï¿½G", i);
     }
     scanf("%d", &n);
     fprintf(fp, "========= lotto649 =========\n========+ NO.%05d +========\n= %s =\n", rc->receipt_id, rc->receipt_time);
@@ -92,7 +92,7 @@ void LottoCreater(int i, lotto_record *rc) {
     }
     fprintf(fp, "========= csie@cgu =========");
     fclose(fp);
-    printf("  ¤w¬°±zÁÊ¶Rªº %d ²Õ¼Ö³z²Õ¦X¿é¥X¦Ü  lotto%05d.txt\n", n, rc->receipt_id);
+    printf("  ï¿½wï¿½ï¿½ï¿½zï¿½Ê¶Rï¿½ï¿½ %d ï¿½Õ¼Ö³zï¿½Õ¦Xï¿½ï¿½Xï¿½ï¿½  lotto%05d.txt\n", n, rc->receipt_id);
     rc->receipt_price = 100 * i;
 }
 
@@ -110,10 +110,10 @@ int main() {
 	int code = 1, price[3] = {0, 0, 0};
     char input[32];
     while(code != 0) {
-        printf("\n½Ð°Ý±z­n¶R´X²Õ¼Ö³z±m¡G");
+        printf("\nï¿½Ð°Ý±zï¿½nï¿½Rï¿½Xï¿½Õ¼Ö³zï¿½mï¿½G");
 	    scanf("%d", &code);
 	    if(code == 0) {
-	    	printf("½Ð¿é¤J¤¤¼ú¸¹½X (³Ì¦h¤T­Ó)¡G");
+	    	printf("ï¿½Ð¿ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½X (ï¿½Ì¦hï¿½Tï¿½ï¿½)ï¿½G");
         	scanf(" %[^\n]%*c", &input);
             for(int i = 0, j = 0, k = 0; i < 31; i++) {
                 if(input[i] > '0' && input[i] <= '9') {
@@ -128,7 +128,7 @@ int main() {
                     break;
                 }
             }
-            printf("¿é¤J¤¤¼ú¸¹½X¬°¡G ");
+            printf("ï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½G ");
             for(int i = 0; i < 3; i++) {
                 printf("%d ", price[i]);
             }
